@@ -1,6 +1,7 @@
 # Fundamentos 😎
 {...}
 
+---
 
 ## Projetos realizados durante o módulo: :hourglass_flowing_sand:
                                                                                                  
@@ -18,4 +19,4 @@
 - [ ] [Projeto Carrinho de Compras]()  
 - [ ] [Projeto Jest Assíncrono e Mocking]() 
 
-![astronauta](https://github.com/ErickArgollo/trybe_exercicios/blob/main/Modulo1:Fundamentos/astronauta.gif)
+![michael](https://github.com/ErickArgollo/trybe_exercicios/blob/main/Modulo1:Fundamentos/office.gif)
