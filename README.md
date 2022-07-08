@@ -1,4 +1,4 @@
-# Trybe :rocket:
+# Trybe :rocket: :100:
 
 Este repositório contém todas as atividades de aprendizagem desenvolvidas por _[mim](https://www.linkedin.com/in/erick-argollo/)_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
 
