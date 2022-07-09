@@ -4,5 +4,8 @@ O que eu vou aprender na Trybe:
 - Git
 -HTML
 -CSS
+-Novos aprendizados1
+-Novos aprendizados2
 -Javascript
 -React
+
