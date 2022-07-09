@@ -6,3 +6,6 @@ O que eu vou aprender na Trybe:
 -CSS
 -Novos aprendizados1
 -Novos aprendizados2
+-Javascript
+-React
+
