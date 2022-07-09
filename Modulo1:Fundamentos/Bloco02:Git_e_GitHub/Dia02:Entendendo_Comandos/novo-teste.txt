@@ -1,6 +1,10 @@
 fazendo um novo teste
 bem
 aqui
+
+adicionado pelo pullrequest na branchteste1
+adicionado pela branch 1
 adicionado pela branchteste2
 adicionado pela branchteste2
 adicionado pela sugestão pullrequest
+
