@@ -12,6 +12,13 @@
     + Aprendi a lidar com Processos & Jobs, colocando atividades em background e trazendo atividades para o foreground;
     
 + Git & GitHub:
+    + Aprendi a como criar uma conta no GitHub e suas configurações;
+    + Aprendi a interagir com o git através do terminal;
+    + Aprendi a salvar arquivos no meu repositório local;
+    + Aprendi a conectar o meu repositório local com o meu repositório remoto;
+    + Aprendi a criar, remover, navegar entre branchs;
+    + Aprendi a solicitar, aprovar, comentar, pull requests;
+    +
 
 
 ---
