@@ -1,6 +1,14 @@
+body {
+    font-size: 16px;
+    
+}
+
+
 h1 {
     font-size: 65px;
     color: orange;
+    font-family: sans-serif;
+    font-style: oblique;
 
 }
 
@@ -10,4 +18,25 @@ li {
 
 .corfundo {
     background-color: blue;
+}
+
+p {
+    font-weight: 600;
+    font-size: 3em;
+    text-align: left;
+    text-decoration: underline;
+    line-height: 100px;
+}
+
+#Azul {
+    background-color: blue;
+}
+
+#Vermelho {
+    background-color: red;
+}
+
+#Preto {
+    background-color: black;
+    color: white;
 }
