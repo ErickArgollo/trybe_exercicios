@@ -1,0 +1,57 @@
+ol li {
+    background-color: yellow;
+}
+
+ol li:nth-of-type(2n+2) {
+    color: green;
+}
+
+ol li:nth-of-type(2n+1) {
+    text-transform: uppercase;
+}
+
+h1, h2, h3 {
+    color: red;
+}
+
+h1 em, h2 em, h3 em {
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: bold;
+}
+
+#linguagens li:not(:nth-of-type(n + 4)) {
+    color: blue;
+  }
+ 
+ .pink {
+    background-color: pink;
+ } 
+
+ #stack {
+    color: orange;
+ }
+
+ #w3 {
+    color: green;
+ }
+
+ #mdn {
+    color: black;
+ }
+
+ #dev {
+    color: yellow;
+ }
+
+ #trybe {
+    color: green;
+ }
+
