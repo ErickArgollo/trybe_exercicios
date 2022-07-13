@@ -35,6 +35,10 @@ li em {
     background-color: pink;
  } 
 
+ #aliados a:hover{
+    font-weight: bold;
+ }
+
  #stack {
     color: orange;
  }
