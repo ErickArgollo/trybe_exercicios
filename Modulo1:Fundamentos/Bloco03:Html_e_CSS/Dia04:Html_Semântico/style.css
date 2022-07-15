@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+td, th {
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: top;
+    
+}
+
+table {
+    border-collapse: collapse;
+    width: 200px;
+}
+
+.theader {
+    height: 30px;
+    background-color: gray;
+}
+
