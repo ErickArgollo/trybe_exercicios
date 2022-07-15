@@ -1,8 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 }
+header {
+    background-image: linear-gradient(to bottom, #74F7C9, #377560);
+    padding: 40px;
+}
+h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-top: -10px;
+}
 
+nav {
+    margin-top: -20px;
+}
+
+nav a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+h2 {
+    font-family: 'Dancing Script', serif;
+    margin: 20px 0px 10px 10px;
+    background-image: linear-gradient(to right, #74F7C9, white );
+}
 
 td, th {
     border: 1px solid black;
@@ -14,6 +43,7 @@ td, th {
 table {
     border-collapse: collapse;
     width: 200px;
+    
 }
 
 .theader {
