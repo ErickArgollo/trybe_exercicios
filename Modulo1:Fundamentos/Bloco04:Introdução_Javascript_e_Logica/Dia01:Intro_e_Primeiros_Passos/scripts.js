@@ -114,8 +114,14 @@ console.log(retornaMaiorde2(10, 20))
     imparOrFalse(10, 2, 6)
    */ 
 //10   
- function lucroMil(ValorProduto, ValorVenda) {
+ function calculaLucro(ValorProduto, ValorVenda, qtdProdutosVendidos) {
     let custoProduto = ValorProduto + (20/100 * ValorProduto);
-    let lucroVendaMil = (ValorVenda - custoProduto) * 1000
-    if (ValorProduto < 0 || ValorVenda < 0)
+    let lucro = (ValorVenda - custoProduto) * qtdProdutosVendidos
+    if (ValorProduto < 0 || ValorVenda < 0) {
+        console.log("Insira valores reais")
+    }
+    else {
+        console.log(lucro)
+    }
  }
+    calculaLucro(2, 10, 10);
