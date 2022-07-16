@@ -1,6 +1,6 @@
 //Exércicios
 //2
-/* 
+
 function retornaMaiorde2(a, b) {
     if(a > b) {
         return a;
@@ -125,7 +125,7 @@ console.log(retornaMaiorde2(10, 20))
     }
  }
     calculaLucro(2, 10, 10);
-*/
+
 //11
 function salarioLiquido(sBruto) {
     let salarioBase;
