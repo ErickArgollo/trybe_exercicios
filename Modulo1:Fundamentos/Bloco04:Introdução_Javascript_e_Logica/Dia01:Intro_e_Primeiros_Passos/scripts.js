@@ -112,7 +112,7 @@ console.log(retornaMaiorde2(10, 20))
     }
 
     imparOrFalse(10, 2, 6)
-   */ 
+   
 //10   
  function calculaLucro(ValorProduto, ValorVenda, qtdProdutosVendidos) {
     let custoProduto = ValorProduto + (20/100 * ValorProduto);
@@ -125,3 +125,44 @@ console.log(retornaMaiorde2(10, 20))
     }
  }
     calculaLucro(2, 10, 10);
+*/
+//11
+function salarioLiquido(sBruto) {
+    let salarioBase;
+    let impostoRenda;
+    if(sBruto <= 1556.94){
+        salarioBase = sBruto - (8/100 * sBruto)
+    }
+    else if(sBruto > 1556.94 && sBruto <= 2594.92) {
+        salarioBase = sBruto - (9/100 * sBruto)
+    }
+    else if(sBruto > 2594.92 && sBruto <= 5189.82) {
+        salarioBase = sBruto - (11/100 * sBruto)
+    }
+    else {
+        salarioBase = sBruto - 578.88
+    }
+
+    if(salarioBase < 1903.98) {
+        impostoRenda = 0;
+    }
+    
+    else if(salarioBase <= 2826.65) {
+        impostoRenda = (7.5/100 * salarioBase) - 142.80
+    }
+    else if(salarioBase <= 3751.05) {
+        impostoRenda = (15/100 * salarioBase) - 354.80
+    }
+    else if(salarioBase <= 4664.68) {
+        impostoRenda = (22.5/100 * salarioBase) - 636.13
+    }
+    else {
+        impostoRenda = (27.5/100 * salarioBase) - 869.36
+    }
+    
+    let sLiquido = salarioBase - impostoRenda
+    
+    return sLiquido;
+}
+
+console.log(salarioLiquido(1900))
