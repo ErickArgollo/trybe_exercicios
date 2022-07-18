@@ -105,3 +105,10 @@ for (var i = 0; i < numbers.length; i += 1){
 console.log(menorValor)
 
 */
+
+//8 e 9
+let numbers = [];
+for(var i=1; i < 26; i += 1) {
+    numbers.push(i/2)
+}
+console.log(numbers)
