@@ -104,7 +104,7 @@ for (var i = 0; i < numbers.length; i += 1){
 }
 console.log(menorValor)
 
-*/
+
 
 //8 e 9
 let numbers = [];
@@ -112,3 +112,33 @@ for(var i=1; i < 26; i += 1) {
     numbers.push(i/2)
 }
 console.log(numbers)
+
+
+
+//Bônus
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+let numbersCrescente = numbers.sort(function(a, b) {return a-b})
+console.log(numbersCrescente)
+
+let numbersDecrescente = numbers.sort(function(a, b) {return b-a})
+console.log(numbersDecrescente);
+
+
+*/
+
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+let numbersMultiplica = [];
+
+for (let i=0; i < numbers.length; i += 1) {
+    
+    if( i < numbers.length - 1) {
+        numbersMultiplica.push(numbers[i] * numbers[i+1])
+    }
+    
+}
+    numbersMultiplica.push(numbers[numbers.length -1] * 2)
+    
+
+console.log(numbersMultiplica)
