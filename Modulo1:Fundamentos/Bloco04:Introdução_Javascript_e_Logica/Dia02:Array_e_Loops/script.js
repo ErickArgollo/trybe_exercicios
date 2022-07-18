@@ -65,6 +65,31 @@ for(var i = 0; i < numbers.length; i += 1) {
 }
 console.log(valor);
 
-*/
 
-//
+
+//6
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let resultado = 0;
+
+
+for (var i=0; i < numbers.length; i+= 1){
+    if(numbers[i] % 2 != 0) {
+        resultado += 1
+    }
+}
+console.log(resultado);
+
+//Caso queira saber quais são os números pares
+
+let listaImpares = [];
+
+for (var i=0; i < numbers.length; i+= 1){
+    if(numbers[i] % 2 != 0) {
+        listaImpares.push(numbers[i])
+
+    }
+}
+
+console.log(listaImpares);
+
+*/
