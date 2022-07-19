@@ -30,7 +30,7 @@ function fatorial(n) {
 }
 
 console.log(fatorial(10))
-*/
+
 //2
 
 function palavraInvertida(string) {
@@ -39,3 +39,35 @@ function palavraInvertida(string) {
     return conversão.reverse()
 }
 console.log(palavraInvertida("testando"))
+
+//teste de conversão array para string
+let teste = ["oi", "eu", "sou"];
+let convertion = teste.join('');
+console.log(convertion)
+
+*/
+
+//3
+let array = ['java', 'javascript', 'python', 'html', 'css'];
+//Pegando a maior palavra
+//Definindo variavel para guardar a maior palavra
+let maiorPalavra = array[0];
+//iterando o array de strings
+for(var i=0; i < array.length; i += 1){
+    if(array[i].length > maiorPalavra.length) {
+        maiorPalavra = array[i]
+    }
+}
+console.log(`A maior palavra é ${maiorPalavra}`)
+
+//pegando a menor palavra
+//Definindo a variavel para guardar a menor palavra
+let menorPalavra = array[0];
+//iterando o array de strings
+for(var i=0; i < array.length; i += 1){
+    if(array[i].length < menorPalavra.length) {
+        menorPalavra = array[i]
+    }   
+}
+
+console.log(`A menor palavra é ${menorPalavra}`)
