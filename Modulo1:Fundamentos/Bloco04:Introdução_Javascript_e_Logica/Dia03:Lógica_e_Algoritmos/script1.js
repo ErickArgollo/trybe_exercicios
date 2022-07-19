@@ -45,7 +45,7 @@ let teste = ["oi", "eu", "sou"];
 let convertion = teste.join('');
 console.log(convertion)
 
-*/
+
 
 //3
 let array = ['java', 'javascript', 'python', 'html', 'css'];
@@ -71,3 +71,16 @@ for(var i=0; i < array.length; i += 1){
 }
 
 console.log(`A menor palavra é ${menorPalavra}`)
+*/
+//3.2 Colocando a questão 3 dentro de uma function
+function maiorPalavra(array){
+    let maiorPalavra = array[0];
+    for(var i=0; i < array.length; i += 1){
+        if(array[i].length > maiorPalavra.length) {
+            maiorPalavra = array[i]
+        }
+    }
+    return `A maior palavra é: "${maiorPalavra}"`;
+}
+
+console.log(maiorPalavra(["Oi", "essesssss", "teste", "javaaaa"]))
