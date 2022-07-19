@@ -1,3 +1,4 @@
+/*
 let max = 100;
 let sum = 0;
 for (var i=1; i <= 100; i ++){
@@ -14,3 +15,18 @@ while (value > 0){
     console.log(`Foi executado ${contador} vez`)
 }
 console.log(value)
+*/
+
+//Inicio Agora a prática
+//1
+
+function fatorial(n) {
+
+    let resultado = 1;
+    for(n; n>= 1; n = n -1){
+        resultado = resultado * n
+    }
+    return resultado;
+}
+
+console.log(fatorial(10))
