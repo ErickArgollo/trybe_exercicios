@@ -15,7 +15,7 @@ while (value > 0){
     console.log(`Foi executado ${contador} vez`)
 }
 console.log(value)
-*/
+
 
 //Inicio Agora a prática
 //1
@@ -30,3 +30,12 @@ function fatorial(n) {
 }
 
 console.log(fatorial(10))
+*/
+//2
+
+function palavraInvertida(string) {
+    //conversão da string em array
+    let conversão = [...string];
+    return conversão.reverse()
+}
+console.log(palavraInvertida("testando"))
