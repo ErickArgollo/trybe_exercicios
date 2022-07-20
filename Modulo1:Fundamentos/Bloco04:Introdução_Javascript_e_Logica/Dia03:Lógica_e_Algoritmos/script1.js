@@ -71,7 +71,7 @@ for(var i=0; i < array.length; i += 1){
 }
 
 console.log(`A menor palavra é ${menorPalavra}`)
-*/
+
 //3.2 Colocando a questão 3 dentro de uma function
 function maiorPalavra(array){
     let maiorPalavra = array[0];
@@ -84,3 +84,27 @@ function maiorPalavra(array){
 }
 
 console.log(maiorPalavra(["Oi", "essesssss", "teste", "javaaaa"]))
+*/
+//4
+
+
+
+
+
+
+//bonus
+//1
+    
+function imprimeQuadradoAst(n) {
+    let qtdAstericos = [];
+    for(var i=0; i < n; i+=1){
+        qtdAstericos.push("*")
+    }
+    let linha = qtdAstericos.join('');
+    for(var i=0; i < linha.length; i+=1){
+        console.log(linha)
+    }
+    return(linha)
+}
+
+imprimeQuadradoAst(10);
