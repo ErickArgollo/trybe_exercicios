@@ -23,7 +23,7 @@ console.log(value)
 function fatorial(n) {
 
     let resultado = 1;
-    for(n; n>= 1; n = n -1){
+    for(n; n>= 1; n -= 1){
         resultado = resultado * n
     }
     return resultado;
@@ -84,16 +84,49 @@ function maiorPalavra(array){
 }
 
 console.log(maiorPalavra(["Oi", "essesssss", "teste", "javaaaa"]))
-*/
+
 //4
 
+//forma 1
 
+for(let i=50; i >= 2; i -= 1) {
+    let contador = 0;
+    
+    for(let j=1; j <= i; j+=1) {
+       if(i % j === 0) {
+        contador += 1;
+       } 
+    }
+
+    if(contador == 2){
+        console.log(i);
+        return;
+    }
+}
+
+//forma 2
+
+let maiorPrimo = 0;
+
+
+for(var i = 2; i <= 50; i+=1){
+        let ehPrimo = true;
+    for(var j = 2; j < i; j+=1){
+        if(i % j === 0){
+           ehPrimo = false;
+        }
+    }
+    if (ehPrimo === true) {
+        maiorPrimo = i;
+    }
+}
+console.log(maiorPrimo);
 
 
 
 
 //bonus
-//1
+// forma 1
     
 function imprimeQuadradoAst(n) {
     let qtdAstericos = [];
@@ -108,3 +141,26 @@ function imprimeQuadradoAst(n) {
 }
 
 imprimeQuadradoAst(10);
+
+
+//forma 2
+
+function imprimeAst(n){
+    let asterisco = '*';
+    let string = '';
+    for(var i = 1; i <= n; i += 1){
+        string += asterisco
+        for(var j = 1; j <= n; j+=1){
+            if(string.length < n){
+                break
+            }
+            else {
+                console.log(string)
+            }
+        }
+    }
+   
+}
+imprimeAst(5);
+*/
+
