@@ -136,9 +136,11 @@ for (let i=0; i < numbers.length; i += 1) {
     if( i < numbers.length - 1) {
         numbersMultiplica.push(numbers[i] * numbers[i+1])
     }
+    else {
+        numbersMultiplica.push(numbers[numbers.length -1] * 2)
     
+    }
 }
-    numbersMultiplica.push(numbers[numbers.length -1] * 2)
     
 
 console.log(numbersMultiplica)
