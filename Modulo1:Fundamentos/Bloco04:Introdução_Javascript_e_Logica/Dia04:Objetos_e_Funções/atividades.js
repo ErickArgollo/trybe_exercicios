@@ -48,7 +48,7 @@ let info = {
         console.log('Ambos recorrentes')
     }
   }
-*/
+
 //6
 let leitor = {
     nome: 'Julia',
@@ -76,4 +76,29 @@ let leitor = {
   //8
   console.log(`${leitor['nome']} tem ${leitor['livrosFavoritos'].length} livros favoritos`)
 
- 
+ */
+//Parte II - Funções
+
+//1
+function ehPalindromo(a){
+    let array = [...a];
+    let newArray = [...a];
+    
+    let teste = newArray.reverse()
+      
+    
+    if(array.join() === teste.join()){     
+        console.log(true)
+    }
+    else{
+        
+        console.log(false)
+    }
+    
+}
+
+ehPalindromo('arara')
+
+
+
+
