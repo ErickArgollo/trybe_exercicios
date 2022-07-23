@@ -139,19 +139,50 @@ function menorValor(){
   return position;
 }
 console.log(menorValor())
-*/
 
 //4 retorna o nome com maior quantidade de caracteres
 function retornaMaior(){
-
+  
   let array = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
   let maiornome = array[0];
   for(let i=0; i < array.length; i+=1){
-    if(array[i].length > maiornome.length){
-      maiornome = array[i];
+    if(array[i].length > maiornome.[i];
     }
   }
-  return maiornome;
+length){
+      maiornome = array  return maiornome;
 }
 console.log(retornaMaior())
+*/
+//5 retornar o inteiro que mais se repete ****************************************************
+
+function maiorRepete(){
+
+  let array = [2, 3, 2, 5, 8, 2, 3, 3];
+  let array2 = [0];
+  
+  for(let i = 0; i < array.length; i+=1){
+        
+        let contadorRepeticao = 0;
+    
+     for(let k = 0; k < array.length; k += 1){
+      
+      if(array[k] == array[i]){
+        contadorRepeticao += 1;
+      }
+
+    }
+    
+    if(contadorRepeticao > array2[0]){
+      
+      array2=[array[i],contadorRepeticao]
+    }
+   
+  }
+  
+  return array2[0];
+  
+}
+
+console.log(maiorRepete())
 
