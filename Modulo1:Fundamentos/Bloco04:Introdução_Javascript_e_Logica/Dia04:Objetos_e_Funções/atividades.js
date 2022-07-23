@@ -122,7 +122,6 @@ return indice;
 }
 
 console.log(maiorValor())
-*/
 //3 retornar indice de menor valor
 function menorValor(){
   let array = [2, 4, 6, 7, 10, 0, -3, 8, -4, 15, 23, -5];
@@ -131,12 +130,28 @@ function menorValor(){
   for(let i=0; i < array.length; i += 1){
     if(array[i] < menor) {
         menor = array[i]
+      }
     }
-  }
-  for(let i=0; i < array.length; i += 1){
-    if(array[i] === menor)
+    for(let i=0; i < array.length; i += 1){
+      if(array[i] === menor)
     position = i
   }
   return position;
 }
 console.log(menorValor())
+*/
+
+//4 retorna o nome com maior quantidade de caracteres
+function retornaMaior(){
+
+  let array = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
+  let maiornome = array[0];
+  for(let i=0; i < array.length; i+=1){
+    if(array[i].length > maiornome.length){
+      maiornome = array[i];
+    }
+  }
+  return maiornome;
+}
+console.log(retornaMaior())
+
