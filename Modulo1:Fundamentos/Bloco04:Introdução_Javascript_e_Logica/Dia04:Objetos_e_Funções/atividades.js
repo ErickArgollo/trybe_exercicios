@@ -76,7 +76,7 @@ let leitor = {
   //8
   console.log(`${leitor['nome']} tem ${leitor['livrosFavoritos'].length} livros favoritos`)
 
- */
+ 
 //Parte II - Funções
 
 //1
@@ -99,6 +99,44 @@ function ehPalindromo(a){
 
 ehPalindromo('arara')
 
+//2 retornar indice de maior valor
+
+function maiorValor(){
 
 
+let array = [2, 3, 6, 7, 10, 1, 11, 50, 40, 100, 12, 45];
+let maior = array[0];
+let indice = 0;
+  
+for(let i = 0; i < array.length; i += 1){
+  if(array[i] > maior) {
+    maior = array[i]
+  }
+ for(let i = 0; i < array.length; i+=1){
+  if(array[i] === maior){
+    indice =  i;
+  }
+ } 
+}
+return indice;
+}
 
+console.log(maiorValor())
+*/
+//3 retornar indice de menor valor
+function menorValor(){
+  let array = [2, 4, 6, 7, 10, 0, -3, 8, -4, 15, 23, -5];
+  let menor = array[0];
+  position = 0;
+  for(let i=0; i < array.length; i += 1){
+    if(array[i] < menor) {
+        menor = array[i]
+    }
+  }
+  for(let i=0; i < array.length; i += 1){
+    if(array[i] === menor)
+    position = i
+  }
+  return position;
+}
+console.log(menorValor())
