@@ -153,24 +153,23 @@ length){
       maiornome = array  return maiornome;
 }
 console.log(retornaMaior())
-*/
 //5 retornar o inteiro que mais se repete ****************************************************
 
 function maiorRepete(){
-
+  
   let array = [2, 3, 2, 5, 8, 2, 3, 3];
   let array2 = [0];
   
   for(let i = 0; i < array.length; i+=1){
         
-        let contadorRepeticao = 0;
+    let contadorRepeticao = 0;
     
-     for(let k = 0; k < array.length; k += 1){
+    for(let k = 0; k < array.length; k += 1){
       
       if(array[k] == array[i]){
         contadorRepeticao += 1;
       }
-
+      
     }
     
     if(contadorRepeticao > array2[0]){
@@ -185,4 +184,21 @@ function maiorRepete(){
 }
 
 console.log(maiorRepete())
+*/
+
+//6
+function somatorio(a){
+  let array = [];
+  let total = 0;
+  for(let i = 1; i <= a; i+=1){
+    array.push(i)
+  }
+  for(let j = 0; j < array.length; j +=1){
+    total += array[j];
+  }
+
+  return total;
+}
+
+console.log(somatorio(5))
 
