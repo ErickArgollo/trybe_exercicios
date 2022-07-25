@@ -201,19 +201,18 @@ function somatorio(a){
 
 console.log(somatorio(200))
 
-*/
 
 //7
 
 function verificaFinal(word, ending){
- 
+  
   let palavra = word.split('').reverse().join('')
   let final = ending.split('').reverse().join('')
   console.log(palavra)
   console.log(final)
   let resultado = false;
-
-
+  
+  
   for(let i = 0; i < final.length; i += 1){
       if(final[i] != palavra[i]){
         resultado = false;
@@ -224,11 +223,31 @@ function verificaFinal(word, ending){
       }
       }
   return resultado;
-  }
+}
 
-  
+
 console.log(verificaFinal('joaofernando', 'ando'));
+*/
+
+//bonus 2
 
 
 
+//console.log(vector[0][0])
 
+let vector = [[1, 2], [3,4,5,6], [7,8,9,10]];
+  
+function arrayNumbers(vector){
+  let arrayPares = [];
+  for(let i=0; i < vector.length; i += 1){
+
+    for(let j=0; j < vector[i].length; j += 1){
+      if(vector[i][j] % 2 === 0){
+        arrayPares.push(vector[i][j])
+      }
+    }
+  }
+  return (arrayPares);
+}
+ 
+console.log(arrayNumbers(vector))
