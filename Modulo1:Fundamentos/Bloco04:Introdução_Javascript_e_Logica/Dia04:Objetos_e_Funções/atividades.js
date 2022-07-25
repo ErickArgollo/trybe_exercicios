@@ -184,7 +184,6 @@ function maiorRepete(){
 }
 
 console.log(maiorRepete())
-*/
 
 //6
 function somatorio(a){
@@ -196,9 +195,40 @@ function somatorio(a){
   for(let j = 0; j < array.length; j +=1){
     total += array[j];
   }
-
+  
   return total;
 }
 
-console.log(somatorio(5))
+console.log(somatorio(200))
+
+*/
+
+//7
+
+function verificaFinal(word, ending){
+ 
+  let palavra = word.split('').reverse().join('')
+  let final = ending.split('').reverse().join('')
+  console.log(palavra)
+  console.log(final)
+  let resultado = false;
+
+
+  for(let i = 0; i < final.length; i += 1){
+      if(final[i] != palavra[i]){
+        resultado = false;
+        break;
+      }
+      else {
+        resultado = true;
+      }
+      }
+  return resultado;
+  }
+
+  
+console.log(verificaFinal('joaofernando', 'ando'));
+
+
+
 
