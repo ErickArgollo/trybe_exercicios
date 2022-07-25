@@ -227,7 +227,6 @@ function verificaFinal(word, ending){
 
 
 console.log(verificaFinal('joaofernando', 'ando'));
-*/
 
 //bonus 2
 
@@ -251,3 +250,85 @@ function arrayNumbers(vector){
 }
  
 console.log(arrayNumbers(vector))
+
+//bonus 3
+const basket = [
+  'Melancia', 'Abacate', 'Melancia', 'Melancia', 'Uva', 'Laranja',
+  'Jaca', 'Pera', 'Melancia', 'Uva', 'Laranja', 'Melancia',
+  'Banana', 'Uva', 'Pera', 'Abacate', 'Laranja', 'Abacate',
+  'Banana', 'Melancia', 'Laranja', 'Laranja', 'Jaca', 'Uva',
+  'Banana', 'Uva', 'Laranja', 'Pera', 'Melancia', 'Uva',
+  'Jaca', 'Banana', 'Pera', 'Abacate', 'Melancia', 'Melancia',
+  'Laranja', 'Pera', 'Banana', 'Jaca', 'Laranja', 'Melancia',
+  'Abacate', 'Abacate', 'Pera', 'Melancia', 'Banana', 'Banana',
+  'Abacate', 'Uva', 'Laranja', 'Banana', 'Abacate', 'Uva',
+  'Uva', 'Abacate', 'Abacate', 'Melancia', 'Uva', 'Jaca',
+  'Uva', 'Banana', 'Abacate', 'Banana', 'Uva', 'Banana',
+  'Laranja', 'Laranja', 'Jaca', 'Jaca', 'Abacate', 'Jaca',
+  'Laranja', 'Melancia', 'Pera', 'Jaca', 'Melancia', 'Uva',
+  'Abacate', 'Jaca', 'Jaca', 'Abacate', 'Uva', 'Laranja',
+  'Pera', 'Melancia', 'Jaca', 'Pera', 'Laranja', 'Jaca',
+  'Pera', 'Melancia', 'Jaca', 'Banana', 'Laranja', 'Jaca',
+  'Banana', 'Pera', 'Abacate', 'Uva',
+];
+
+
+let ordem = basket.sort();
+  let objectFruit = {};
+ 
+  for(let i = 0; i < ordem.length; i += 1){
+        let count = 0;
+        for(let j =0; j < ordem.length; j += 1){
+          if(ordem[i] == ordem[j+1]){
+              count += 1
+              objectFruit[ordem[i]] = count
+            }
+          }
+          
+        }
+        objectFruit['Abacate'] += 1
+        console.log(objectFruit)
+        
+        console.log(`Sua cesta possui ${objectFruit.Abacate} Abacates, ${objectFruit['Banana']}
+        Bananas`)
+        //bonus 4
+        let moradores = {
+     blocoUm: [
+    {
+      nome: 'Luiza',
+      sobrenome: 'Guimarães',
+      andar: 10,
+      apartamento: 1005,
+    },
+    {
+      nome: 'William',
+      sobrenome: 'Albuquerque',
+      andar: 5,
+      apartamento: 502,
+    },
+  ],
+  blocoDois: [
+    {
+      nome: 'Murilo',
+      sobrenome: 'Ferraz',
+      andar: 8,
+      apartamento: 804,
+    },
+    {
+      nome: 'Zoey',
+      sobrenome: 'Brooks',
+      andar: 1,
+      apartamento: 101,
+    },
+  ],
+};
+
+console.log(`O morador do bloco 2 de nome ${moradores['blocoDois'][1]['nome']} mora no ${moradores['blocoDois'][1]['andar']} andar, apartamento ${moradores['blocoDois'][1]['apartamento']}`)
+*/
+//bonus 5
+
+
+
+
+
+
