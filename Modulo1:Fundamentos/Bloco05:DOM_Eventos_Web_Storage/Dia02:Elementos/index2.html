@@ -105,13 +105,20 @@
         let ul = document.createElement('ul');
         sectionRight.appendChild(ul)
 
-        for(let i = 1; i <= 10; i+=1){
+        const arrayNumeros = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez']
+
+        for(let i = 0; i < arrayNumeros.length; i+=1){
             let li = document.createElement('li');
-            li.innerText = i
+            li.innerText = arrayNumeros[i]
             ul.appendChild(li)
         }
 
         // requisito 9
+
+        for(let i = 1; i <=3; i += 1){
+          let h3 = document.createElement('h3');
+          main.appendChild(h3)
+        }
 
     </script>
   </body>
