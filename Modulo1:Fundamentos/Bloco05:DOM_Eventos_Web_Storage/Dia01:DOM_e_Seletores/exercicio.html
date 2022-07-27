@@ -54,6 +54,51 @@
  Crie e execute uma função que modifique todo o texto da tag <p> para maiúsculo.
  Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
         */
+       //Função para mudar o texto na tag p
+       function mudaTextoP(indice){
+        let paragrafo = document.getElementsByTagName('p')
+        paragrafo[indice].innerText = 'Trabalhando como programador em uma boa empresa.'
+       }
+       mudaTextoP(1);
+       
+       //Função para mudar a cor main content
+       function mudaCor(indice){
+       let elemento = document.getElementsByClassName('main-content');
+       elemento[indice].style.backgroundColor = 'rgb(76,164,109)'
+       }
+       mudaCor(0);
+        //Função muda cor center content
+        function mudaCorCenter(indice){
+            let elemento = document.getElementsByClassName('center-content');
+
+            elemento[indice].style.backgroundColor ='white';
+        }
+        mudaCorCenter(0)
+        //Função mudança texto h1
+        function h1(indice, texto){
+            let h1 = document.getElementsByClassName('title');
+            h1[indice].innerText = texto;
+        }
+        h1(0, 'Javascript')
+        //função que modifique todo o texto da tag <p> para maiúsculo.
+                function upperCase(){ //se colocar tag como parametro?
+                let paragrafo = document.getElementsByTagName('p');
+                 for(let i=0; i < paragrafo.length; i += 1){   
+                paragrafo[i].innerHTML = paragrafo[i].innerHTML.toUpperCase();
+                 }
+                }
+                upperCase()
+
+                function exibeConteudo(){
+                    let element = document.getElementsByTagName('p');
+                    for(let i = 0; i < element.length; i+=1){
+                        console.log(element[i].innerHTML)
+                    }
+                }
+                exibeConteudo();
+                
+            
+            
     </script>
   </body>
 </html>
