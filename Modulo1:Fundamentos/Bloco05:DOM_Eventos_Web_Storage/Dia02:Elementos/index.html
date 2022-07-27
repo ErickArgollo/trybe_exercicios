@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="paiDoPai">
+        <section id="pai">
+          <section id="primeiroFilho"></section>
+          <section id="elementoOndeVoceEsta">
+            <section id="primeiroFilhoDoFilho"></section>
+            <section id="segundoEUltimoFilhoDoFilho"></section>
+          </section>
+          Atenção!
+          <section id="terceiroFilho"></section>
+          <section id="quartoEUltimoFilho"></section>
+        </section>
+      </main>
+
+
+      <script>
+        const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+
+        let pai = document.getElementById('elementoOndeVoceEsta').parentNode;
+        
+        pai.style.color = 'blue'
+        
+
+        let primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
+        primeiroFilhoDoFilho.innerText = 'olá, mundo';
+        //ex2
+        
+        //pq n consigo usar appendChild 2x?
+        let sect = document.createElement('section');
+        sect.className = 'teste'
+        let filho1 = pai.appendChild(sect)
+        // let filho2 = pai.appendChild(sect)
+        
+        let sect2 = document.createElement('section')
+        sect2.id = 'teste2'
+        let filho2 = pai.appendChild(sect2)
+        //crie um filho para elementoOndeVoceEsta
+        let sect3 = document.createElement('section')
+        elementoOndeVoceEsta.appendChild(sect3)
+        
+        
+        //Criar um filho para elemento primeiroFilhoDoFilho
+        let sect3 = document.createElement('section')
+        sect3.className = 'teste3'
+        primeiroFilhoDoFilho.appendChild(sect3)
+
+        const terceiroFilho = document.getElementsByClassName('teste3')[0]
+        
+      </script>
+</body>
+</html>
