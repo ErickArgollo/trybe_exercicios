@@ -81,13 +81,13 @@
         }
         h1(0, 'Javascript')
         //função que modifique todo o texto da tag <p> para maiúsculo.
-                function upperCase(){ //se colocar tag como parametro?
-                let paragrafo = document.getElementsByTagName('p');
+                function upperCase(tag){ //se colocar tag como parametro?
+                let paragrafo = document.getElementsByTagName(tag);
                  for(let i=0; i < paragrafo.length; i += 1){   
                 paragrafo[i].innerHTML = paragrafo[i].innerHTML.toUpperCase();
                  }
                 }
-                upperCase()
+                upperCase('p')
 
                 function exibeConteudo(){
                     let element = document.getElementsByTagName('p');
