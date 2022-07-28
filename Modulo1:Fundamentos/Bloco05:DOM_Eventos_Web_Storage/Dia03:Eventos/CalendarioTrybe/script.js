@@ -21,8 +21,6 @@ function createDaysOfTheWeek() {
 
 
   let ul = document.querySelector('#days');
-  
-  
   document.body.appendChild(ul)
   
   for(let i = 2; i < decemberDaysList.length; i += 1){
@@ -113,6 +111,22 @@ createButton('Feriado')
       }
     }
   }
+
+  //EXERCICIO 6
+  let dias = document.getElementsByClassName('day');
   
+  function zoomIn(event){
+    event.target.style.fontSize = '50px';
+  }
+  function zoomOut(event){
+    event.target.style.fontSize = '20px'
+  }
+  
+  for(let i = 0; i < dias.length; i += 1){
+    let dia = document.getElementsByClassName('day')[i];
+    dia.addEventListener('mouseover', zoomIn);
+    dia.addEventListener('mouseout', zoomOut)
+  }
+
 
   
