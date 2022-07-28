@@ -59,4 +59,25 @@ function createDaysOfTheWeek() {
   }
 
 createButton('Feriado')
-console.log(buttonsContainer)
+//console.log(buttonsContainer)
+
+  //Exercicio 3
+  let button = document.getElementById('btn-holiday');
+
+  button.addEventListener('click', changeColor);
+
+  let holidays = document.getElementsByClassName('holiday');
+  console.log(holidays)
+  function changeColor(){
+    for(let i = 0; i < holidays.length; i += 1){
+      let holiday = document.getElementsByClassName('holiday')[i];
+      if(holiday.style.color === 'red'){
+      holiday.style.color = '#777';
+      }
+      else{
+        holiday.style.color = 'red'
+      }
+   }
+  }
+
+  
