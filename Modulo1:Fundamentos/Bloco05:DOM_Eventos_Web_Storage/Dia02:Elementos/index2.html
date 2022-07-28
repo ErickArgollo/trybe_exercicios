@@ -62,6 +62,7 @@
 
       let h1 = document.createElement('h1');
       h1.innerHTML = 'Exercicio 5.2 - JavaScript DOM'
+      h1.className = 'title';
       
       body.appendChild(h1);
 
@@ -104,6 +105,7 @@
         //adicao lista nao ordenada requisito 8
         let ul = document.createElement('ul');
         sectionRight.appendChild(ul)
+        ul.id = 'lista'
 
         const arrayNumeros = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez']
 
@@ -117,8 +119,38 @@
 
         for(let i = 1; i <=3; i += 1){
           let h3 = document.createElement('h3');
+          h3.className = 'description'
           main.appendChild(h3)
         }
+
+        //requisito 3 da parte 2
+        main.removeChild(sectionLeft);
+
+        //requisito 4   
+        sectionRight.style.margin = 'auto'
+        //requisito 5
+        sectionCenter.parentNode.style.backgroundColor = 'green';
+        //requisito 6
+        //solução mais simples, aplicavel para listas pequenas e pegando os ultimos elementos
+       /*  console.log(ul.lastElementChild)
+        ul.lastElementChild.remove()
+        ul.lastElementChild.remove() */
+        //Solução iterando a lista
+         // console.log(ul.childNodes[0].innerHTML.includes('Um'))
+          for(let i = 0; i < ul.childNodes.length; i += 1){
+            console.log(ul.childNodes.length)
+            if(ul.childNodes[i].innerHTML.includes('Dez')){
+              ul.childNodes[i].remove();
+              
+            }
+            if(ul.childNodes[i].innerHTML.includes('Nove')){
+              ul.childNodes[i].remove()
+              
+            }
+          }
+          
+            
+        
 
     </script>
   </body>
