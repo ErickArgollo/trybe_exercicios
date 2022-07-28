@@ -20,8 +20,8 @@ function createDaysOfTheWeek() {
   let arrayFeriados = [24, 25, 31]
 
 
-  let ul = document.createElement('ul');
-  ul.id = 'days'
+  let ul = document.querySelector('#days');
+  
   
   document.body.appendChild(ul)
   
@@ -38,7 +38,19 @@ function createDaysOfTheWeek() {
     }
 
   }
-  console.log(ul)
+  //console.log(ul)
 
-  //EXERCICIO 2
-  
+  //EXERCICIO 2 Criando um button dinamicamente
+  let buttonsContainer = document.querySelector('.buttons-container');
+  function createButton(string){
+    let button = document.createElement('button');
+    button.id = 'btn-holiday'
+    button.setAttribute('type', 'button')
+    //button.appendChild(document.createTextNode(string)) Forma 1 de adicionar o nome
+    button.innerHTML = string //Forma 2 de adicionar o nome
+    buttonsContainer.appendChild(button)
+   
+  }
+  createButton('Feriado')
+//buttonsContainer.innerHTML = "<button id='btn-holiday' type='button'>teste</button>"
+console.log(buttonsContainer)
