@@ -92,9 +92,9 @@ createButton('Feriado')
   //EXERCICIO 5
 
   let fridayButton = document.getElementById('btn-friday');
-  console.log(fridayButton)
+  //console.log(fridayButton)
   let fridayList = document.getElementsByClassName('friday');
-  console.log(fridayList);
+  //console.log(fridayList);
   
   
   fridayButton.addEventListener('click', mudaNome); //PRECISO LEMBRAR QUE NÃO É NECESSÁRIO CHAMAR A FUNÇÃO JÁ QUE ELA VAI ACONTECER CASO ALGUM EVENTO ACONTEÇA.
@@ -129,4 +129,15 @@ createButton('Feriado')
   }
 
 
-  
+  //EXERCICIO 7
+  const myTasks = document.querySelector('.my-tasks');
+  console.log(myTasks);
+
+  function adicionaTarefa(string){
+    let span = document.createElement('span')
+    span.innerHTML = string + '<br>'
+    myTasks.appendChild(span)
+  }
+adicionaTarefa('Estudar')
+adicionaTarefa('Dormir')
+//adicionaTarefa('Teste')
