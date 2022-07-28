@@ -46,16 +46,17 @@ function createDaysOfTheWeek() {
     let button = document.createElement('button');
     button.id = 'btn-holiday'
     button.setAttribute('type', 'button')
-    //button.appendChild(document.createTextNode(string)) Forma 1 de adicionar o nome
-    button.innerHTML = string //Forma 2 de adicionar o nome
+     //button.appendChild(document.createTextNode(string)) Forma 1 de adicionar o nome
+    button.innerHTML = string //Forma 2 de adicionar o nome (Bem melhor)
     buttonsContainer.appendChild(button)
    
   }
   createButton('Feriado') */
+  
   //EXERCICIO 2 FORMA 2;
   let buttonsContainer = document.querySelector('.buttons-container');
   function createButton(string){
-    buttonsContainer.innerHTML = `<button id='btn-holiday' type='button'>${string}</button>`
+    buttonsContainer.innerHTML += `<button id='btn-holiday' type='button'>${string}</button>`
   }
 
 createButton('Feriado')
@@ -67,7 +68,7 @@ createButton('Feriado')
   button.addEventListener('click', changeColor);
 
   let holidays = document.getElementsByClassName('holiday');
-  console.log(holidays)
+  //console.log(holidays)
   function changeColor(){
     for(let i = 0; i < holidays.length; i += 1){
       let holiday = document.getElementsByClassName('holiday')[i];
@@ -79,5 +80,17 @@ createButton('Feriado')
       }
    }
   }
+  //EXERCICIO 4
+  
+  function createFridayButton(string){
+    let fridayButton = document.createElement('button');
+    fridayButton.id = 'btn-friday'
+    fridayButton.setAttribute('type', 'button');
+    fridayButton.innerHTML = string;
+    buttonsContainer.appendChild(fridayButton)
+    console.log(fridayButton)
+    console.log(buttonsContainer)
+  }
+  createFridayButton('Sexta-Feira')
 
   
