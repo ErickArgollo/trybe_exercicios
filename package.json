@@ -1,0 +1,31 @@
+{
+  "name": "trybe",
+  "version": "1.0.0",
+  "description": "![bem-vindo(a)](https://github.com/ErickArgollo/trybe_exercicios/blob/main/andy.gif)",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log('teste') --watchAll=false",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErickArgollo/trybe_exercicios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErickArgollo/trybe_exercicios/issues"
+  },
+  "homepage": "https://github.com/ErickArgollo/trybe_exercicios#readme",
+  "devDependencies": {
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
