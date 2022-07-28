@@ -40,8 +40,8 @@ function createDaysOfTheWeek() {
   }
   //console.log(ul)
 
-  //EXERCICIO 2 Criando um button dinamicamente
-  let buttonsContainer = document.querySelector('.buttons-container');
+  //EXERCICIO 2 Criando um button dinamicamente 
+  /* let buttonsContainer = document.querySelector('.buttons-container');
   function createButton(string){
     let button = document.createElement('button');
     button.id = 'btn-holiday'
@@ -51,6 +51,12 @@ function createDaysOfTheWeek() {
     buttonsContainer.appendChild(button)
    
   }
-  createButton('Feriado')
-//buttonsContainer.innerHTML = "<button id='btn-holiday' type='button'>teste</button>"
+  createButton('Feriado') */
+  //EXERCICIO 2 FORMA 2;
+  let buttonsContainer = document.querySelector('.buttons-container');
+  function createButton(string){
+    buttonsContainer.innerHTML = `<button id='btn-holiday' type='button'>${string}</button>`
+  }
+
+createButton('Feriado')
 console.log(buttonsContainer)
