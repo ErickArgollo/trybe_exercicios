@@ -44,8 +44,7 @@ function createDaysOfTheWeek() {
     let button = document.createElement('button');
     button.id = 'btn-holiday'
     button.setAttribute('type', 'button')
-     //button.appendChild(document.createTextNode(string)) Forma 1 de adicionar o nome
-    button.innerHTML = string //Forma 2 de adicionar o nome (Bem melhor)
+    button.innerHTML = string 
     buttonsContainer.appendChild(button)
    
   }
@@ -53,6 +52,7 @@ function createDaysOfTheWeek() {
   
   //EXERCICIO 2 FORMA 2;
   let buttonsContainer = document.querySelector('.buttons-container');
+  
   function createButton(string){
     buttonsContainer.innerHTML += `<button id='btn-holiday' type='button'>${string}</button>`
   }
@@ -127,17 +127,30 @@ createButton('Feriado')
     dia.addEventListener('mouseover', zoomIn);
     dia.addEventListener('mouseout', zoomOut)
   }
-
-
+  
+  
   //EXERCICIO 7
   const myTasks = document.querySelector('.my-tasks');
   console.log(myTasks);
-
+  
   function adicionaTarefa(string){
     let span = document.createElement('span')
     span.innerHTML = string + '<br>'
     myTasks.appendChild(span)
   }
-adicionaTarefa('Estudar')
-adicionaTarefa('Dormir')
-//adicionaTarefa('Teste')
+  adicionaTarefa('Estudar')
+
+  //adicionaTarefa('Teste')
+  
+  //EXERCICIO 8
+  
+  function criaDiv(cor){
+    let div = document.createElement('div');
+    div.className = 'task';
+    div.style.backgroundColor = cor;
+    myTasks.appendChild(div);
+    console.log(div)
+  }
+  criaDiv('green')
+  
+  
