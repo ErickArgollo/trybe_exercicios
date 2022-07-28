@@ -83,14 +83,36 @@ createButton('Feriado')
   //EXERCICIO 4
   
   function createFridayButton(string){
-    let fridayButton = document.createElement('button');
-    fridayButton.id = 'btn-friday'
-    fridayButton.setAttribute('type', 'button');
-    fridayButton.innerHTML = string;
-    buttonsContainer.appendChild(fridayButton)
-    console.log(fridayButton)
-    console.log(buttonsContainer)
+    let button = document.createElement('button');
+    button.id = 'btn-friday'
+    button.setAttribute('type', 'button');
+    button.innerHTML = string;
+    buttonsContainer.appendChild(button)  
   }
   createFridayButton('Sexta-Feira')
+  
+  //EXERCICIO 5
+
+  let fridayButton = document.getElementById('btn-friday');
+  console.log(fridayButton)
+  let fridayList = document.getElementsByClassName('friday');
+  console.log(fridayList);
+  
+  
+  fridayButton.addEventListener('click', mudaNome); //PRECISO LEMBRAR QUE NÃO É NECESSÁRIO CHAMAR A FUNÇÃO JÁ QUE ELA VAI ACONTECER CASO ALGUM EVENTO ACONTEÇA.
+
+  function mudaNome(){ 
+    let arraySexta = [4, 11, 18, 25] //Esse array indica os dias que são sexta-feira, utilizo para voltar no estado original ao clicar no botão novamente
+    for(let i = 0; i < fridayList.length; i += 1){
+      let friday = document.getElementsByClassName('friday')[i]
+      if(friday.innerHTML === 'Sexta-Feira'){
+          friday.innerHTML = arraySexta[i]
+      }
+      else{
+        friday.innerHTML = 'Sexta-Feira'
+      }
+    }
+  }
+  
 
   
