@@ -131,7 +131,7 @@ createButton('Feriado')
   
   //EXERCICIO 7
   const myTasks = document.querySelector('.my-tasks');
-  console.log(myTasks);
+  //console.log(myTasks);
   
   function adicionaTarefa(string){
     let span = document.createElement('span')
@@ -149,8 +149,25 @@ createButton('Feriado')
     div.className = 'task';
     div.style.backgroundColor = cor;
     myTasks.appendChild(div);
-    console.log(div)
+    //console.log(div)
   }
   criaDiv('green')
   
+  //EXERCICIO 9
+  const task = document.getElementsByClassName('task')[0];
+
+
+  task.addEventListener('click', addClass);
+
+  function addClass(event){
+    if(event.target.className === 'task selected'){
+      event.target.className ='task'
+    }
+    else {
+      event.target.className = 'task selected'
+    }
+  }
+  
+  
+  //console.log(task);
   
