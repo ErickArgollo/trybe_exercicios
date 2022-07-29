@@ -152,9 +152,10 @@ createButton('Feriado')
     //console.log(div)
   }
   criaDiv('green');
-  criaDiv('yellow')
-  
-  //EXERCICIO 9
+  criaDiv('yellow');
+  criaDiv('blue')
+  criaDiv('purple')
+  //EXERCICIO 9 
 
   const task = document.getElementsByClassName('task');
   //console.log(task);
@@ -199,4 +200,5 @@ createButton('Feriado')
     dia.addEventListener('click', color)
     
   }
-  console.log(task)
+  
+  //Bônus
