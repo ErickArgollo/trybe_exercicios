@@ -151,23 +151,52 @@ createButton('Feriado')
     myTasks.appendChild(div);
     //console.log(div)
   }
-  criaDiv('green')
+  criaDiv('green');
+  criaDiv('yellow')
   
   //EXERCICIO 9
-  const task = document.getElementsByClassName('task')[0];
 
-
-  task.addEventListener('click', addClass);
+  const task = document.getElementsByClassName('task');
+  //console.log(task);
+  
 
   function addClass(event){
-    if(event.target.className === 'task selected'){
-      event.target.className ='task'
-    }
-    else {
+    
+      for(let i = 0; i < task.length; i += 1){
+        let selected = document.getElementsByClassName('task')[i];
+        if(selected.className == 'task selected'){
+          selected.className = 'task'
+        }
+      }
       event.target.className = 'task selected'
-    }
+    
   }
   
   
-  //console.log(task);
+  for(let i = 0; i < task.length; i += 1){
+    let selected = document.getElementsByClassName('task')[i]
+    selected.addEventListener('click', addClass)
+  }
+
   
+
+
+  
+  //EXERCICIO 10
+  
+  function color(event){
+    let tarefa = document.getElementsByClassName('task selected')[0];
+    if(event.target.style.color === tarefa.style.backgroundColor){
+      event.target.style.color = 'rgb(119,119,119)'
+    }
+    else{
+      event.target.style.color = tarefa.style.backgroundColor
+    }  
+  }
+  
+  for(let i = 0; i < dias.length; i += 1){
+    let dia = document.getElementsByClassName('day')[i];
+    dia.addEventListener('click', color)
+    
+  }
+  console.log(task)
