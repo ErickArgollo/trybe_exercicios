@@ -19,7 +19,7 @@ function adicionaClasse(event){
    let classTech = document.querySelector('.tech');
    classTech.classList.remove('tech');
    event.target.className = 'tech';
-   input.value = '';
+   
    
    
 console.log(event.target)

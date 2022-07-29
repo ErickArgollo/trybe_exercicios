@@ -202,3 +202,28 @@ createButton('Feriado')
   }
   
   //Bônus
+
+  const taskInput = document.getElementById('task-input');
+  const btnAdd = document.getElementById('btn-add');
+  const taskList = document.querySelector('.task-list');
+
+  btnAdd.addEventListener('click', adicionaCompromisso)
+
+  function adicionaCompromisso(event){
+    let li = document.createElement('li');
+    
+    const taskInputV = taskInput.value;
+    if(taskInputV.length === 0){
+      alert('adicione algum compromisso')
+    }
+
+    else if (taskInputV.length > 0){
+      li.innerHTML = taskInputV
+      taskList.appendChild(li)
+    }
+
+    console.log(li)
+    console.log(taskInputV)
+  }
+
+  
