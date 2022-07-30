@@ -39,7 +39,7 @@ function createDaysOfTheWeek() {
   //console.log(ul)
 
   //EXERCICIO 2 Criando um button dinamicamente 
-  /* let buttonsContainer = document.querySelector('.buttons-container');
+   let buttonsContainer = document.querySelector('.buttons-container');
   function createButton(string){
     let button = document.createElement('button');
     button.id = 'btn-holiday'
@@ -48,16 +48,16 @@ function createDaysOfTheWeek() {
     buttonsContainer.appendChild(button)
    
   }
-  createButton('Feriado') */
+  createButton('Feriado') 
   
-  //EXERCICIO 2 FORMA 2;
+  /* //EXERCICIO 2 FORMA 2;
   let buttonsContainer = document.querySelector('.buttons-container');
   
   function createButton(string){
     buttonsContainer.innerHTML += `<button id='btn-holiday' type='button'>${string}</button>`
-  }
+  } */
 
-createButton('Feriado')
+//createButton('Feriado')
 //console.log(buttonsContainer)
 
   //Exercicio 3
@@ -208,11 +208,26 @@ createButton('Feriado')
   const taskList = document.querySelector('.task-list');
 
   btnAdd.addEventListener('click', adicionaCompromisso)
+  taskInput.addEventListener('keypress', pressEnter)
+
+  function pressEnter(event){
+    const li = document.createElement('li');
+    const taskInputV = taskInput.value
+    if(event.key === "Enter" && taskInputV.length === 0) {
+      alert('adicione algum crompromisso')
+    }
+    else if (event.key === "Enter" && taskInputV.length > 0){
+      li.innerHTML = taskInputV
+      taskList.appendChild(li)
+    }
+  }
+  
 
   function adicionaCompromisso(event){
     let li = document.createElement('li');
     
     const taskInputV = taskInput.value;
+    
     if(taskInputV.length === 0){
       alert('adicione algum compromisso')
     }

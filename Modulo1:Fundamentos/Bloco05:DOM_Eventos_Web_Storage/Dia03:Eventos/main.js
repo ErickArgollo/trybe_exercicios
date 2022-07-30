@@ -74,3 +74,8 @@ secondLi.addEventListener('dblclick', resetText);
 // Não precisa passar o parâmetro dentro da callback resetText. O próprio
 // navegador fará esse trabalho por você, não é legal? Desse jeito, o
 // event.target na nossa função retornará o objeto 'firstLi'.
+
+// function pega(p1,p2)
+// { 
+    switch(p1)
+    { case 'id': return document.getElementById(p2); case 'class': return document.getElementsByClassName(p2); case 'tag': return document.getElementsByTagName(p2); case 'query': return document.querySelector(p2); case 'qAll': return document.querySelectorAll(p2); case 'create': return document.createElement(p2); default: return 'erro'; } } 
