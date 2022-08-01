@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="tarefa" placeholder="adicione sua tarefa"> 
+    <input type="button" value="adicionar tarefa" id="button-tarefa" >
+    <ul id="lista"></ul>
+
+
+
+    <script>
+        const inputTarefa = document.getElementById('tarefa');
+        const button = document.getElementById('button-tarefa');
+        const lista = document.getElementById('lista');
+        
+        button.addEventListener('click', adicionaTarefa);
+        
+        let tarefas = [];
+        console.log(tarefas)
+        
+        function adicionaTarefa(){
+            let tarefa = inputTarefa.value;
+            let li = document.createElement('li');
+            li.innerText = tarefa;
+            lista.appendChild(li);
+            tarefas.push(li.innerText);
+            localStorage.setItem('tarefas', JSON.stringify(tarefas))
+            document.getElementById('tarefa').value = '';
+        }
+        
+        function criaLi(){
+            let array = JSON.parse(localStorage.getItem('tarefas'));
+            for(let i = 0; i < array.length; i += 1){
+                let li = document.createElement('li');
+                li.innerText = array[i];
+                lista.appendChild(li);
+            }
+        }
+        
+        if(localStorage.length > 0){
+             criaLi()   
+        }
+        
+        
+        
+    </script>
+</body>
+</html>
