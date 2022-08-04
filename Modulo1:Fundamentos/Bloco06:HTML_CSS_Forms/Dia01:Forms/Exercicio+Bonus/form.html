@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form action="" method="get" id="form">
+        <h2>Dados</h2>
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" minlength="10" maxlength="40" required>
+        </div>
+        
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="" id="email" minlength="10" maxlength="50" required>
+        </div>
+        <div>
+            <h2>Destino preferido</h2>
+            <label for="cidade"><input type="radio" name="destino" id="cidade">Cidade</label>
+            <label for="campo"><input type="radio" name="destino" id="campo">Campo</label>
+            <label for="praia"><input type="radio" name="destino" id="praia">Praia</label>
+            <label for="montanhas"><input type="radio" name="destino" id="montanhas">Montanhas</label>
+        </div>
+        <div>
+            <h2>Por que deveria ganhar?</h2>
+            <textarea name="" id="motivo" cols="30" rows="10" maxlength="500"></textarea>
+        </div>
+        <div>
+            <h2>Digite uma data para viajar</h2>
+            <label for="data">Data:</label>
+            <input type="date" name="" id="data">
+        </div>
+        <div>
+            <input type="checkbox" name="check" id="ofertas">
+            <label for="ofertas">Gostaria de receber oportunidades</label>
+            <br>
+            <input type="checkbox" name="check" id="direitoimg">
+            <label for="direitoimg">Concordo que imagens poderão ser utilizadas</label>
+        </div>
+        <button type="submit" id="button">Enviar informações</button>
+        <button id="clear">Apagar</button>
+    </form>
+    <script>
+        const form = document.getElementById('form')
+        const button = document.getElementById('button');
+        const apagar = document.getElementById('clear');
+        const input = document.querySelectorAll('input');
+        const textarea = document.querySelector('textarea');
+
+        apagar.addEventListener('click', function(e){
+            for(let i = 0; i < input.length; i += 1){
+                input[i].value = '';
+                input[i].checked = false;
+            }
+            textarea.value = '';
+        })
+
+        button.addEventListener('click', function(e){
+            e.preventDefault()
+        })
+    </script>
+</body>
+</html>
