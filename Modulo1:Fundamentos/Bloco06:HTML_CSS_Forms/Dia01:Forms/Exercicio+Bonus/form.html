@@ -5,44 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms</title>
+    <link rel="stylesheet" href="bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.2.0-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <form action="" method="get" id="form">
-        <h2>Dados</h2>
+    <form action="" method="get" id="form" class="text-center">
         <div>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" minlength="10" maxlength="40" required>
+            <h2>Dados</h2>
+            <label for="nome" class="form-label">Nome:</label>
+            <input class="form-text"  type="text" id="nome" minlength="10" maxlength="40" required>
         </div>
         
         <div>
-            <label for="email">Email:</label>
-            <input type="email" name="" id="email" minlength="10" maxlength="50" required>
+            <label for="email" class="form-label">Email:</label>
+            <input class="form-text" type="email" name="" id="email" minlength="10" maxlength="50" required>
         </div>     
         <div>
             <h2>Destino preferido</h2>
-            <label for="cidade"><input type="radio" name="destino" id="cidade">Cidade</label>
-            <label for="campo"><input type="radio" name="destino" id="campo">Campo</label>
-            <label for="praia"><input type="radio" name="destino" id="praia">Praia</label>
-            <label for="montanhas"><input type="radio" name="destino" id="montanhas">Montanhas</label>
+            <label for="cidade"><input class="form-check-input" type="radio" name="destino" id="cidade">Cidade</label>
+            <label for="campo"><input class="form-check-input" type="radio" name="destino" id="campo">Campo</label>
+            <label for="praia"><input class="form-check-input" type="radio" name="destino" id="praia">Praia</label>
+            <label for="montanhas"><input class="form-check-input" type="radio" name="destino" id="montanhas">Montanhas</label>
         </div>
         <div>
             <h2>Por que deveria ganhar?</h2>
-            <textarea name="" id="motivo" cols="30" rows="10" maxlength="500"></textarea>
+            <textarea name="" id="motivo" cols="30" rows="10" maxlength="500""></textarea>
         </div>
         <div>
             <h2>Digite uma data para viajar</h2>
             <label for="data">Data:</label>
-            <input type="date" name="" id="data">
+            <input class="form-text" type="date" name="" id="data">
         </div>
         <div>
-            <input type="checkbox" name="check" id="ofertas">
+            <input class="form-check-input" type="checkbox" name="check" id="ofertas">
             <label for="ofertas">Gostaria de receber oportunidades</label>
             <br>
-            <input type="checkbox" name="check" id="direitoimg">
+            <input class="form-check-input" type="checkbox" name="check" id="direitoimg">
             <label for="direitoimg">Concordo que imagens poderão ser utilizadas</label>
         </div>
-        <button type="submit" id="button" disabled>Enviar informações</button>
-        <button id="clear">Apagar</button>
+        <button class="btn-group" type="submit" id="button">Enviar informações</button>
+        <button class="btnc-group" id="clear">Apagar</button>
     </form>
     <script>
         const form = document.getElementById('form')
@@ -66,29 +68,30 @@
 
         button.addEventListener('click', function(e){
             e.preventDefault()
-            let valor1 = nome.value;
-            let valor2 = email.value;
-            if(valor1.length < 10 || valor2.length < 10){
-                alert('Dados inválidos!')
-            }
-            else {
-                alert('Dados enviados com sucesso!')
-            }
+
+             let valor1 = nome.value;
+             let valor2 = email.value;
+             if(valor1.length < 10 || valor2.length < 10){
+                 alert('Dados inválidos!')
+             }
+             else {
+                 alert('Dados enviados com sucesso!')
+             }
         
         })
 
 
-        function enableSubmit(){
-            if(direitoimg.checked == false){
-                button.disabled = true;
-            }
-            else {
-                button.disabled = false;
-            }
+         function enableSubmit(){
+             if(direitoimg.checked == false){
+                 button.disabled = true;
+             }
+             else {
+                 button.disabled = false;
+             }
             
-        }
+         }
         
-        direitoimg.addEventListener('click', enableSubmit)
+         direitoimg.addEventListener('click', enableSubmit)
     </script>
 </body>
 </html>
