@@ -27,7 +27,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [x] 3-2: _HTML & CSS - Primeiros passos em CSS_
 - [x] 3-3: _HTML & CSS - Seletores e posicionamento_
 - [x] 3-4: _HTML Semântico_
-- [x] 3-5: _[Projeto - HTML & CSS]()_
+- [x] 3-5: <b>Projeto - LessonsLearned</b>
 
 ##### Bloco 4: Introdução - JavaScript
 
@@ -35,7 +35,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [x] 4-2: _JavaScript - Array e loop For_
 - [x] 4-3: _JavaScript - Lógica de Programação e Algoritmos_
 - [x] 4-4: _JavaScript - Objetos e funções_
-- [x] 4-5: _[Projeto - Playground Functions]()_
+- [x] 4-5: <b> Projeto - Playground Functions </b>
 
 ##### Bloco 5: Introdução - JavaScript - Projetos
 
@@ -45,7 +45,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [x] 5-4: _JavaScript - Web Storage_
 - [x] 5-5: _[Projeto - Meme Generator]()_
 - [x] 5-6: _[Projeto - Arte com Pixels](https://github.com/ErickArgollo/project-Pixel-Art)_
-- [x] 5-7: _[Projeto - Lista de tarefas]()_
+- [x] 5-7: Projeto - Lista de tarefas
 - [x] 5-7: _[Projeto - Adivinhe a Cor]()_
 - [x] 5-7: _[Projeto - Carta Misteriosa]()_
 
