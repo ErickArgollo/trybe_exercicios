@@ -50,6 +50,10 @@ footer {
   border: 0.4px solid black;
   border-radius: 20px;
 }
+.customize:hover{
+  transform: translateY(10px);
+  border: 1px solid black;
+}
 .end {
   display: flex;
   justify-content: center;
