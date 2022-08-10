@@ -17,4 +17,17 @@ const testingScope = (escopo) => {
     escopo === true ? console.log('Não devo ser utilizada fora do meu escopo(if), ótimo, fui utilizada no escopo!') : console.log('Não devo ser utilizada fora do meu escopo')
 }
 
+
+// Ex 2 usando sort
 testingScope(false)
+
+const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+
+const sortOddsAndEvens = (array) => {
+
+return `Os numeros ${array.sort(function (a, b) {return a-b})} se encontram de forma crescente`
+
+};
+
+console.log(sortOddsAndEvens(oddsAndEvens))
+
