@@ -47,27 +47,47 @@
 
 // console.log(retornaMaior('Antônio foi no banheiro e não sabemos o que aconteceu'))
 
-//4 forma como a questão pediu
+//4 função 1 forma como a questão pediu
 
 // const substituaX = (nome) => `Tryber ${nome} aqui!`;
 
 // console.log(substituaX('Erick'));
 
-//4 Forma 2
+//4 função 1 Forma 2
 
-const teste = 'ola eu sou erick';
+// const teste = 'ola eu sou erick';
 
-const arr = teste.split('')
+// const arr = teste.split('')
 
-const substituaX = (frase) => {
-    const arr = frase.split('');
+// const substituaX = (frase) => {
+//     const arr = frase.split('');
 
-    for(let i = 0; i <  arr.length; i+=1){
-        if(arr[i] == 'x'){
-            arr[i] = 'Trybe'
-        }
-    }
-    return arr.join('')
+//     for(let i = 0; i <  arr.length; i+=1){
+//         if(arr[i] == 'x'){
+//             arr[i] = 'Trybe'
+//         }
+//     }
+//     return arr.join('')
+// }
+
+// console.log(substituaX('ola pessoax tux bem x com vocxs'));
+
+//4 função 2
+const substituaX = (nome) => `Tryber ${nome} aqui!`;
+const minhasSkills = (x) => {
+    const skills = ['Javascript', 'CSS', 'HTML'];
+    let resultado = `
+    ${x}
+
+    minhas três habilidades são:
+        `;
+    for(let i = 0; i < skills.length; i += 1){
+     resultado += `
+    -${skills[i]} 
+     `
+     }
+
+    return resultado;
 }
 
-console.log(substituaX('ola pessoax tux bem x com vocxs'))
+console.log(minhasSkills(substituaX('bebeto')))
