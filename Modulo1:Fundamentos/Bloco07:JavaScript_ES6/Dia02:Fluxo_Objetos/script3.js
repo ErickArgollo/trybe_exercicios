@@ -73,4 +73,20 @@ const checkEntries = (objeto ,chave, valor) => {
     return igual;
 }
 
-console.log(checkEntries(lesson1, 'materia', 'Matemática'));
+//console.log(checkEntries(lesson1, 'materia', 'Matemática'));
+
+//bonus 1
+console.log(allLessons)
+function totalMatemática(){
+    const key = Object.keys(allLessons);
+    let totalEstudantes = 0;
+    for(let i = 0; i < key.length; i += 1){
+        if(allLessons[key[i]].materia === 'Matemática'){
+            
+         totalEstudantes += allLessons[key[i]].numeroEstudantes
+
+        }
+    }
+    return `${totalEstudantes} pessoas estudaram matématica`;
+}
+
