@@ -36,3 +36,5 @@ const list = (student) => {
 }
 
 //console.log(list(student1))
+
+console.log(Object.values(student1))
