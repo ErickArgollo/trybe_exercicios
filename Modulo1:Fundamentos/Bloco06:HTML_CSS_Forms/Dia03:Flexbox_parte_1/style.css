@@ -70,7 +70,10 @@ footer {
 .gallery-img {
   width: 150px;
 }
+.gallery-img:hover {
 
+  transform: translateY(20px);
+}
 .social-img {
   width: 25px;
   margin-left: 10px;

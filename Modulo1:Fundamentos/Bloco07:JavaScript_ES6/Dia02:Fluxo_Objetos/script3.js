@@ -76,17 +76,94 @@ const checkEntries = (objeto ,chave, valor) => {
 //console.log(checkEntries(lesson1, 'materia', 'Matemática'));
 
 //bonus 1
-console.log(allLessons)
-function totalMatemática(){
+function totalEstudantes(materia){
     const key = Object.keys(allLessons);
     let totalEstudantes = 0;
     for(let i = 0; i < key.length; i += 1){
-        if(allLessons[key[i]].materia === 'Matemática'){
+        if(allLessons[key[i]].materia === materia){
             
          totalEstudantes += allLessons[key[i]].numeroEstudantes
 
         }
     }
-    return `${totalEstudantes} pessoas estudaram matématica`;
+    return totalEstudantes;
 }
 
+//bonus 2
+
+
+function takeTeacher(professor){
+    const key = Object.keys(allLessons);
+    for(let i = 0; i < key.length; i += 1){
+        if(allLessons[key[i]].professor === professor){
+            return allLessons[key[i]].professor
+        }
+    }
+}
+
+
+function takeSubjects(materias){
+    const key = Object.keys(allLessons);
+    const arr = [];
+    for(let i = 0; i < key.length; i += 1){
+        if(allLessons[key[i]].materia === materias){
+            arr.push(allLessons[key[i]].materia)
+        }
+    }
+    return arr;
+}
+
+
+function createReport(professor){
+    const newObject = {
+        Professor: takeTeacher(professor), // essa função é para caso o nome não exista, ele consiga entrar no else e levar a mensagem de erro;
+        Aulas: '',
+        Estudantes: '',
+    }
+
+    if(newObject.Professor === 'Maria Clara'){
+        newObject.Aulas = takeSubjects('Matemática')
+        newObject.Estudantes = totalEstudantes('Matemática')
+        return newObject
+    }
+    if(newObject.Professor === 'Carlos'){
+        newObject.Aulas = takeSubjects('História')
+        newObject.Estudantes = totalEstudantes('História')
+        return newObject
+    }
+    else{
+        return console.log('Digite um nome válido!')
+    }
+
+
+}
+
+//console.log(createReport('Maria Clara'))
+
+
+
+function pegaInfo(nome){
+    const value = Object.values(allLessons);
+    let newArr = [];
+    let students = 0;
+
+    for(let i = 0; i < value.length; i += 1){
+        if(value[i].professor === nome){
+            newArr.push(value[i].materia)
+            students += value[i].numeroEstudantes
+        }
+    }
+    return { Aulas: newArr, Alunos: students }
+}
+
+
+function createReport(nome){
+    let newObject = {};
+    newObject.professor = nome;
+    Object.assign(newObject, pegaInfo(nome))
+    return newObject;
+}
+
+
+
+console.log(createReport('Maria Clara'))

@@ -14,19 +14,23 @@
 
 
 
-    function teste(param0, param1){
+    /* function teste(param0, param1){
         document.body.style[param1] = JSON.parse(localStorage.getItem(param0)) 
         
-    }
+    } */
 
     function addToLocalStorage(){
 
-        teste('backgroundcolor', 'backgroundColor')
-         
+        //teste('backgroundcolor', 'backgroundColor')
+        let backgroundColor = JSON.parse(localStorage.getItem('backgroundcolor'))
+        document.body.style.backgroundColor = backgroundColor;
+
         section.style.color = JSON.parse(localStorage.getItem('fontcolor'))
 
         let fontSize = JSON.parse(localStorage.getItem('fontsize'));
         section.style.fontSize = fontSize;
+
+
 
     }
 
@@ -56,6 +60,9 @@
         localStorage.setItem('fontsize', JSON.stringify(fontSize));
     })
    
+    lineheight.addEventListener('change', function(){
+        let valor = 
+    })
 
     
     window.onload = function(){

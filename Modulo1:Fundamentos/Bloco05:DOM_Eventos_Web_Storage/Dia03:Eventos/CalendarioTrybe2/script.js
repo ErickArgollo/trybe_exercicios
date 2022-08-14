@@ -188,7 +188,7 @@ addEventListenerLi()
 
 function addColor(event){
   let taskSelected = document.getElementsByClassName('task selected')[0];
-  console.log()
+  
   if(event.target.style.color == taskSelected.style.backgroundColor){
     event.target.style.color = '#666'
   }
