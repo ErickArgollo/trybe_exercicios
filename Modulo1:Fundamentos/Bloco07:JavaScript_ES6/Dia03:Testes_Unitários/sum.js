@@ -51,6 +51,41 @@ function encode(string) {
     return arrayString.join('');
   }
 
+function decode(string){
+    let arrayString = string.split('');
+    console.log(arrayString)
+    const array = [1, 2, 3, 4, 5];
+    const vogals = ['a', 'e', 'i', 'o', 'u'];
+
+    for(let i = 0; i < arrayString.length; i += 1){
+        for(let j = 0; j < arrayString.length; j += 1){
+            if(arrayString[j] == array[i]){
+                arrayString[j] = vogals[i];
+                
+            }
+        }
+    }
+    return arrayString.join('');
+}
+
+function techList(array, nome) {
+    if (array.length === 0) {
+      return 'Vazio!';
+    }
+    
+    let arrayOrdem = array.sort();
+  
+    for (let i = 0; i < arrayOrdem.length; i += 1) {
+      let objetoTechList = {
+        tech: '',
+        name: nome,
+      };
+      objetoTechList.tech = arrayOrdem[i];
+  
+      arrayOrdem[i] = objetoTechList;
+    }
+    return array;
+  }
 
 
-module.exports = { sum, sub, myRemove, fizzBuzz, encode}
+module.exports = { sum, sub, myRemove, fizzBuzz, encode, techList}

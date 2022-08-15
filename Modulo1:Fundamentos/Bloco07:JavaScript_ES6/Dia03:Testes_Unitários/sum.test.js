@@ -1,7 +1,7 @@
 // const sum = require('./sum');
 // const sub = require('./sub')
 const {
-  sum, sub, myRemove, fizzBuzz, encode
+  sum, sub, myRemove, fizzBuzz, encode, techList
 } = require('./sum');
 
 describe('testes sum', () =>{ 
@@ -80,4 +80,36 @@ describe('encode e decode', ()=>{
 
     expect(encode('la vai a bela moça').length).toBe(18);
   })
+})
+
+describe('Teste techlist', ()=>{
+  it('Testa a função techList', () =>{
+   expect(typeof techList).toBe('function')
+  })
+
+  it('Lista com 5 tecnologias deve retornar uma lista de objetos ordenados', ()=>{
+    expect(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas')).toEqual([
+      {
+        tech: 'CSS',
+        name: 'Lucas'
+      },
+      {
+        tech: 'HTML',
+        name: 'Lucas'
+      },
+      {
+        tech: 'JavaScript',
+        name: 'Lucas'
+      },
+      {
+        tech: 'Jest',
+        name: 'Lucas'
+      },
+      {
+        tech: 'React',
+        name: 'Lucas'
+      }
+    ]);
+  })
+
 })
