@@ -48,4 +48,20 @@ describe('testes do fizzbuzz', ()=>{
   it('Verifica se ao chamar a função com o número 15, retorna fizzBuzz', () =>{
     expect(fizzBuzz(15)).toBe('fizzBuzz')
   })
+
+  it('Verifica se ao chamar a função com o número 9, retorna buzz', () => {
+    expect(fizzBuzz(9)).toBe('buzz')
+  })
+
+  it('Verifica se ao chamar a função com o número 5, retorna fizz', () =>{
+    expect(fizzBuzz(5)).toBe('fizz')
+  })
+
+  it('Verifica se ao chamar a função com o número 4, retorna o própio número', ()=>{
+    expect(fizzBuzz(4)).toBe(4);
+  })
+
+  it('Verifica se ao chamar a função com um parametro que não representa um número, retorna false', ()=>{
+    expect(fizzBuzz('teste')).toBe(false)
+  })
 })
