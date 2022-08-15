@@ -1,7 +1,7 @@
 // const sum = require('./sum');
 // const sub = require('./sub')
 const {
-  sum, sub, myRemove, fizzBuzz
+  sum, sub, myRemove, fizzBuzz, encode
 } = require('./sum');
 
 describe('testes sum', () =>{ 
@@ -63,5 +63,21 @@ describe('testes do fizzbuzz', ()=>{
 
   it('Verifica se ao chamar a função com um parametro que não representa um número, retorna false', ()=>{
     expect(fizzBuzz('teste')).toBe(false)
+  })
+})
+
+describe('encode e decode', ()=>{
+  it('Verifica se as funções encode e decode são funções', ()=>{
+    expect(typeof encode).toBe('function')
+  })
+  it('Verifica se a função encode, ao receber as vogais a, e, i, o, u retorna 1, 2, 3, 4, 5', ()=>{
+    expect(encode('a, e, i, o, u')).toBe('1, 2, 3, 4, 5')
+  })
+  it('Verifica se as demais letras da palavra não são convertidas em números, a string "la vai a bela moça", deverá retornar "l1 v13 1 b2l1 m4ç1', ()=>{
+    expect(encode('la vai a bela moça')).toBe('l1 v13 1 b2l1 m4ç1')
+  })
+  it('Verifica se a string retornada possui a mesma quantidade de caracteres da original', ()=>{
+
+    expect(encode('la vai a bela moça').length).toBe(18);
   })
 })

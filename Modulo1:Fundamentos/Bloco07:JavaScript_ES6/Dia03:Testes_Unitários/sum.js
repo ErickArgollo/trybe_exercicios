@@ -37,6 +37,20 @@ const fizzBuzz = (num) => {
         return num;
 }
 
+function encode(string) {
+    let arrayString = string.split('');
+    let array = ['a', 'e', 'i', 'o', 'u'];
+
+    for (let i = 0; i < array.length; i += 1) {
+      for (let j = 0; j < arrayString.length; j += 1) {
+        if (arrayString[j] === array[i]) {
+          arrayString[j] = i + 1;
+        }
+      }
+    }
+    return arrayString.join('');
+  }
 
 
-module.exports = { sum, sub, myRemove, fizzBuzz}
+
+module.exports = { sum, sub, myRemove, fizzBuzz, encode}
