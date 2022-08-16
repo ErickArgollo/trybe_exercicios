@@ -1,7 +1,7 @@
 // const sum = require('./sum');
 // const sub = require('./sub')
 const {
-  sum, sub, myRemove, fizzBuzz, encode, techList
+  sum, sub, myRemove, fizzBuzz, encode, techList, searchEmployee
 } = require('./sum');
 
 describe('testes sum', () =>{ 
@@ -112,4 +112,19 @@ describe('Teste techlist', ()=>{
     ]);
   })
 
+})
+
+describe('Função para procurar empregados', () => {
+  it('Verifica se a função searchEmployer é uma função', ()=>{
+    expect(typeof searchEmployee).toBe('function')
+  })
+  it('Verifica se ao digitar um ID correspondente, o retorno é esse ID',() =>{
+    expect(searchEmployee('4678-2', 'id')).toBe('4678-2')
+  })
+  it('Verifica se ao digitar um ID inexistente, é retornado um erro', ()=>{
+    expect(() => {searchEmployee('1111-2', 'id')}).toThrow()
+  })
+  it('Verifica se id,lastname retorna o sobrenome do usuario' , ()=>{
+    expect(searchEmployee('4678-2', 'lastName')).toBe('Dodds')
+  })
 })
