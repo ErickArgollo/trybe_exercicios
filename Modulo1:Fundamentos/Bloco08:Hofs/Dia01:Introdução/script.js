@@ -48,6 +48,7 @@
 // doingThings(goCoffe)
 
 //AGORA A PRÁTICA 
+//1
 const newEmployees = (callback) => {
     const employees = {
       id1: callback('Pedro', 'Guerra'), // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
@@ -67,4 +68,23 @@ const newEmployees = (callback) => {
 
 const x = newEmployees(employer);
 
-console.log(x);
+//console.log(x);
+
+//2;
+const sorteio = (num, callback) => {
+const sortNum = Math.round(Math.random() * 5)
+
+callback(num, sortNum) ? console.log(`Parabéns, vc ganhou, ${num}, ${sortNum}`) : console.log('Tente novamente') 
+
+}
+
+
+const verifyNum = (num, sortNum) => {
+  if(num === sortNum){
+    return true;
+  }
+}
+
+sorteio(5, verifyNum)
+
+//3
