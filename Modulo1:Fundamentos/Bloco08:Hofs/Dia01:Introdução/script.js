@@ -85,6 +85,33 @@ const verifyNum = (num, sortNum) => {
   }
 }
 
-sorteio(5, verifyNum)
+//sorteio(5, verifyNum)
 
 //3
+
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const notas = (answers, student, callback) => {
+let nota = 0;
+return callback(answers, student, nota)
+}
+
+const compare = (arr1, arr2, nota) =>{
+  const add = 1;
+  const reduce = 0.5;
+  
+  for(let i = 0; i < arr1.length; i += 1){
+    if(arr1[i] === arr2[i]){
+      nota += add
+    }
+    else {
+      if(arr2[i] !== 'N.A'){
+        nota -= reduce
+      }
+    }
+  }
+  return nota;
+}
+
+console.log(notas(['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'], ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'], compare))
