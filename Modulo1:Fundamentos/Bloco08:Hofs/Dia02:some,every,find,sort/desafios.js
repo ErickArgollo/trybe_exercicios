@@ -10,9 +10,9 @@ const usuarios = [
   { nome: 'Maggie', sobreNome: 'Simpson', temCNH: false },
 ];
 
-usuarios.forEach((element) =>{
-  console.log(`${element.nome} ${element.sobreNome} tem cara de motorista? ${element.temCNH === true ? 'sim' : 'não'}`)
-})
+// usuarios.forEach((element) =>{
+//   console.log(`${element.nome} ${element.sobreNome} tem cara de motorista? ${element.temCNH === true ? 'sim' : 'não'}`)
+// })
 
 
 // Use o FIND para retornar o estado que tem a sigla RR (use mais siglas para validar seu código)
@@ -49,6 +49,13 @@ const estados = [
   { TO: 'Tocantins' },
 ];
 
+const newArr = [...estados].reverse();
+console.log(newArr)
+//const x = estados.find((element) => element['RR'])
+estados.reverse().forEach((element) =>{
+console.log(`Sigla: ${Object.keys(element)}, Estado: ${Object.values(element)}`)
+  //console.log(element)
+})
 
 // Ordene o vetor de estudantes da maior para a menor média, lembrando que a média
 // pode ser calculada somando-se as notas de avalição, projeto e trabalho em grupo
