@@ -50,10 +50,10 @@ const estados = [
 ];
 
 const newArr = [...estados].reverse();
-console.log(newArr)
+//console.log(newArr)
 //const x = estados.find((element) => element['RR'])
 estados.reverse().forEach((element) =>{
-console.log(`Sigla: ${Object.keys(element)}, Estado: ${Object.values(element)}`)
+//console.log(`Sigla: ${Object.keys(element)}, Estado: ${Object.values(element)}`)
   //console.log(element)
 })
 
@@ -71,3 +71,14 @@ const pessoasEstudantes = [
 ];
 
 
+for(let i = 0; i < pessoasEstudantes.length; i += 1){
+    let mediaAluno = (pessoasEstudantes[i].avaliacao + pessoasEstudantes[i].projeto + pessoasEstudantes[i].trabalhoGrupo) / 3;
+    pessoasEstudantes[i].media = mediaAluno.toFixed(1);
+}
+
+console.table(pessoasEstudantes.sort((a, b) => {
+  return a.media < b.media ? 1 : -1
+}))
+
+console.table(pessoasEstudantes)
+//console.log(pessoasEstudantes[1].avaliacao)
