@@ -34,10 +34,15 @@
       }
     }
     
+    function callFunctions(){
+      verificaLength();
+      verificaNumber()
+    }
+
     function sum() {
         try {
-            verificaLength()
-            verificaNumber()
+            
+            callFunctions()
             const result = Number(value1.value) + Number(value2.value);
             document.getElementById('result').innerHTML = `Resultado: ${result}`;
 

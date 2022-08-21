@@ -84,7 +84,7 @@ const musicas = [
     { id: '31031685', title: 'Partita in C moll BWV 997' },
     { id: '31031686', title: 'Toccata and Fugue, BWV 565' },
     { id: '31031687', title: 'Chaconne, Partita No. 2 BWV 1004' },
-  ]
+]
   
   function findMusic(id) {
     return musicas.find((element) => element.id === id )
@@ -94,4 +94,44 @@ const musicas = [
 
 
 
+  const listNames = ['Maria', 'Manuela', 'Jorge', 'Ricardo', 'Wilson'];
 
+  const verifyFirstLetter = (letter, name) => name.some((nome) => nome[0] === letter);
+
+  const grades = {
+    portugues: 'Aprovado',
+    matematica: 'Reprovado',
+    ingles: 'Aprovado',
+  };
+  
+  const verifyGrades = (grade) => Object.values(grade).every((value) => value === 'Aprovado')
+  console.log(verifyGrades(grades));
+
+  const names3 = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
+
+const hasName = (arr, name) => {
+  return arr.some((element) => element === name)
+}
+
+console.log(hasName(names3, 'fabio'))
+
+const people = [
+    { name: 'Mateus', age: 18 },
+    { name: 'Ano', age: 16 },
+    { name: 'Ana', age: 23 },
+    { name: 'Cláudia', age: 20 },
+    { name: 'Bruna', age: 19 },
+  ];
+  
+ 
+  const verifyAges = (arr, minimumAge) => {
+    return arr.every((element) => element.age >= minimumAge)
+  }
+  
+  //console.log(verifyAges(people, 20));
+
+
+  const orderAges = (arr) => arr.sort((a, b) => a.age - b.age)
+  const orderNames = (arr) => arr.sort((a, b) => a.name > b.name ? 1 : -1)
+
+  console.log(orderNames(people))

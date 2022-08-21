@@ -18,6 +18,10 @@ it('Testa se a função sum lança um erro quando os parâmetros são 4 e "5" st
   expect(()=>sum(4, '5')).toThrow('parameters must be numbers')
 })
 
+it('TESTE X', ()=>{
+  expect(()=>sum(4, '5')).toThrow('')
+})
+
 }),
 
 
