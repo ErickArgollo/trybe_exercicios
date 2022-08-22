@@ -64,7 +64,33 @@ const books = [
   // Adicione o código do exercício aqui:
   //1 - Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
  const x  = books.find((element) => element.author.birthYear === 1947).author.name
- 
+ //console.log(x);
 
+  //2 Retorne o nome do livro de menor nome.
 
-  console.log(x);
+  function smallerName(){
+      let smallestName = books[0].name
+    books.forEach(element => {
+        if(element.name.length < smallestName.length){
+            smallestName = element.name
+        }
+    })
+    return smallestName
+  }
+
+  //console.log(smallerName())
+//3
+  const expectedResult = {
+    id: 1,
+    name: 'As Crônicas de Gelo e Fogo',
+    genre: 'Fantasia',
+    author: {
+      name: 'George R. R. Martin',
+      birthYear: 1948,
+    },
+    releaseYear: 1991,
+  };
+  
+  function getNamedBook() {
+    // escreva seu código aqui
+  }
