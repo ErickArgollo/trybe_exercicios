@@ -53,7 +53,7 @@ const newArr = [...estados].reverse();
 //console.log(newArr)
 //const x = estados.find((element) => element['RR'])
 estados.reverse().forEach((element) =>{
-//console.log(`Sigla: ${Object.keys(element)}, Estado: ${Object.values(element)}`)
+console.log(`Sigla: ${Object.keys(element)}, Estado: ${Object.values(element)}`)
   //console.log(element)
 })
 

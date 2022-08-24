@@ -25,7 +25,7 @@ const books = [
       genre: 'Ficção Científica',
       author: {
         name: 'Isaac Asimov',
-        birthYear: 1920,
+        birthYear: 1921,
       },
       releaseYear: 1951,
     },
@@ -35,7 +35,7 @@ const books = [
       genre: 'Ficção Científica',
       author: {
         name: 'Frank Herbert',
-        birthYear: 1920,
+        birthYear: 1921,
       },
       releaseYear: 1965,
     },
@@ -105,4 +105,58 @@ const books = [
     return books.sort((a, b) => b.releaseYear - a.releaseYear)
   }
 
-  console.log(booksOrderedByReleaseYearDesc())
+  //console.log(booksOrderedByReleaseYearDesc())
+
+  //5 Faça uma função que retorne true, se todas as pessoas autoras nasceram no século XX, ou false, caso contrário.
+
+  function everyoneWasBornOnSecXX() {
+   return books.every((element) => element.author.birthYear >= 1901 && element.author.birthYear <= 2000)
+  }
+  
+  //console.log(everyoneWasBornOnSecXX())
+
+  //6 Faça uma função que retorne true, se algum livro foi lançado na década de 80, e false, caso contrário.
+
+  function someBookWasReleaseOnThe80s() {
+    return books.some((element) => element.releaseYear > 1980)
+  }
+
+//console.log(someBookWasReleaseOnThe80s())
+
+  //7 Faça uma função que retorne true, caso nenhum author tenha nascido no mesmo ano, e false, caso contrário.
+ 
+ 
+  function authorUnique() {
+
+   const x = books.some((element, index, array) => {
+        for(let i = 0; i < array.length; i += 1){
+            if(i !== index){
+                 element.author.birthYear !== array[i].author.birthYear
+            }
+        }
+    })
+    return x
+  }
+ //console.log(authorUnique());
+ 
+ 
+ 
+ 
+ 
+  //teste comparação entre array
+  const arr = [1, 2, 3, 4];
+ 
+  const z = arr.some((element, index, array) => {
+    for(let i = 0; i < array.length; i += 1){
+        if(i  !== index){
+        return element === array[i]
+        }
+    }
+  })
+
+
+  //console.log(z);
+
+  //teste
+
+  

@@ -118,7 +118,7 @@ console.log(hasName(names3, 'fabio'))
 const people = [
     { name: 'Mateus', age: 18 },
     { name: 'Ano', age: 16 },
-    { name: 'Ana', age: 23 },
+    { name: 'ana', age: 23 },
     { name: 'Cláudia', age: 20 },
     { name: 'Bruna', age: 19 },
   ];
@@ -132,6 +132,8 @@ const people = [
 
 
   const orderAges = (arr) => arr.sort((a, b) => a.age - b.age)
-  const orderNames = (arr) => arr.sort((a, b) => a.name > b.name ? 1 : -1)
+
+  //COMPARAÇÃO RELACIONADA AO CÓDIGO DAS LETRAS, 
+  const orderNames = (arr) => arr.sort((a, b) => a.name.toUpperCase() > b.name.toUpperCase() ? 1 : -1)
 
   console.log(orderNames(people))
