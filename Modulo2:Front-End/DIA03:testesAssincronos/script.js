@@ -8,6 +8,6 @@ async function takeApi(username){
     return data
 
 }
-takeApi('ErickArgollo');
+takeApi();
 
 module.exports = takeApi;
